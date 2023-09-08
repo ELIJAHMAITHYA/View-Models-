@@ -3,6 +3,7 @@ package com.example.viewmodels
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -15,7 +16,7 @@ import com.example.viewmodels.ui.theme.ContactsViewModel
 import com.example.viewmodels.ui.theme.ViewModelsTheme
 
 class MainActivity : ComponentActivity() {
-    private val viewModel = ContactsViewModel()
+    private val viewModel by viewModels<ContactsViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
